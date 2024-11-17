@@ -1,0 +1,464 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #FAEDCA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 450px;
+    margin: 20px;
+}
+
+#form {
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid #F2C078;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#form h1 {
+    color: #0f2027;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+
+.input-contols label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.input-contols input {
+    width: 100%;
+    padding: 12px;
+    font-size: 14px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.input-contols input:focus {
+    border-color: #2939C2;
+    outline: none;
+}
+
+.input-contols .error {
+    color: #ff3860;
+    font-size: 12px;
+    margin-top: 5px;
+    min-height: 17px;
+}
+
+.input-contols.success input {
+    border-color: #09c372;
+}
+
+.input-contols.error input {
+    border-color: #ff3860;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    color: white;
+    background-color: #2939C2;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 4px;
+    margin-bottom: 1px;
+}
+
+button:hover {
+    background-color: #213199;
+    transform: translateY(-2px);
+}
+
+p {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-top: 15px;
+}
+
+p a {
+    color: #2939C2;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+.success-message {
+    text-align: center;
+    color: #2ecc71;
+    font-size: 14px;
+    margin-top: 15px;
+    padding: 10px;
+    border-radius: 4px;
+    display: none;
+}
+
+.success-message.show {
+    display: block;
+} */
+ */
+ /* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+ }
+
+ body {
+    background-color: #FAEDCA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+ }
+
+ .container {
+    max-width: 400px;
+    width: 100%;
+    margin: 20px;
+ }
+
+ #form {
+    background-color: white;
+    padding: 30px;
+    border: 2px solid #F2C078;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+ }
+
+ #form h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0f2027;
+    font-size: #333;
+ }
+
+ .input-controls label {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+ }
+
+ .input-controls input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+ }
+
+ .input-controls .error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+ }
+
+ .input-controls.success input{
+    border-color: rgb(32, 209, 32);
+ }
+
+ .input-controls.error input{
+    border-color: red;
+ }
+
+ button {
+    width: 100%;
+    padding: 12px;
+    background-color: rgb(76, 76, 250);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-top: 10px;
+    margin-bottom: 1px;
+ }
+
+ p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+    color: black;
+ }
+
+ p a{
+    text-decoration: none;
+ }
+
+ p a:hover {
+    text-decoration: underline;
+ }
+
+ .success-message {
+    text-align: center;
+    color: lightgreen;
+    margin-top: 15px;
+    font-size: 14px;
+    border-radius: 4px;
+    display: none;
+ }
+
+ .success-message.show {
+    display: block;
+ }
+
+ /* * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins';
+    box-sizing: border-box;
+ }
+
+ body {
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+ }
+
+ .container {
+    width: 100%;
+    max-width: 400px;
+    margin: 20px;
+ }
+
+ #form {
+    background-color: white;
+    padding: 30px;
+    border: 2px solid pink;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+ }
+
+ #form h1 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+ }
+
+ .input-contols label {
+    display: block;
+    font-size: 15px;
+    margin-bottom: 4px;
+ }
+
+ .input-contols input {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    margin-bottom: 40px;
+    
+ }
+
+ .input-contols input:focus {
+    border-color: blue;
+    outline: none;
+ }
+
+ .input-contols.success input {
+    border-color: rgb(25, 194, 25);
+ }
+
+ .input-contols.error input {
+    border-color: red;
+ }
+
+ .input-contols .success-message {
+    color: red;
+    font-size: 12px;
+    transition: all 0.3s ease;
+ }
+
+ button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 12px;
+    background-color: rgb(55, 55, 255);
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 12px;
+    margin-top: 16px;
+ }
+
+ p {
+    text-align: center;
+    font-size: 14px;
+    margin-top: 10px;
+ }
+
+ p a {
+    text-decoration: none;
+ }
+
+ p a:hover {
+    text-decoration: underline;
+ }
+
+ .success-message {
+    font-size: 15px;
+    text-align: center;
+    color: green;
+    display: none;
+ }
+
+ .success-message.show {
+    display: block;
+ }
+
+ .input-contols .error {
+    color: red;
+    margin-top: -40px;
+    font-size: 12px;
+    margin-bottom: 4px;
+    text-align: right;
+ }
+
+  */
+
+  * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins';
+  }
+
+  body {
+   background-color: #FDE7BB;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 100vh;
+  }
+
+  .container {
+   width: 100%;
+   max-width: 450px;
+   margin: 20px;
+  }
+
+  #form {
+   background-color: #fff;
+   padding: 30px;
+   border: 2px solid #FBF8EF;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+   transition: all 0.3s ease;
+  }
+
+  #form h1 {
+   text-align: center;
+   margin-top: -5px;
+   margin-bottom: 20px;
+   font-size: 28px;
+   color: rgb(24, 20, 20);
+  }
+
+  .input-controls label {
+   display: block;
+   font-size: 17px;
+   margin-top: 25px;
+   margin-bottom: 8px;
+  }
+
+   input {
+      width: 90%;
+      padding: 15px;
+      border: 2px solid #ddd;
+      font-size: 14px;
+      border-radius: 4px;
+   }
+
+   input:focus {
+      border-color: blue;
+      outline: none;
+   }
+
+   button {
+      margin-top: 20px;
+      margin-bottom: 10px;
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 8px;
+      font-size: 15px;
+      font-weight: bolder;
+      background-color: rgb(41, 41, 255);
+      color: white;
+      transition: all 0.3s ease;
+   }
+
+   button:hover {
+      background-color: blue;
+   }
+
+   .success-message {
+      text-align: center;
+      color: green;
+      padding: 5px;
+      background-color: #ddd;
+      border-radius: 6px;
+      display: none;
+   }
+
+   .success-message.show {
+      display: block;
+   }
+
+   p {
+      font-size: 15px;
+      text-align: center;
+      margin-bottom: -5px;
+      margin-top: 5px;
+   }
+
+   p a {
+      text-decoration: none;
+   }
+   p a:hover {
+      text-decoration: underline;
+   }
+
+   .input-controls .error {
+      color: red;
+      font-size: 14px;
+      margin-top: 4px;
+   }
+
+   .input-controls.success input {
+      border-color: green;
+   }
+
+
+
+
+
+   

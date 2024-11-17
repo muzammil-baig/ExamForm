@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />  
+</head>
+<body>
+    <div class="container">
+        <form id="form" novalidate>
+            <h1>Login</h1>
+            <div class="input-controls">
+                <label for="email">Email</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    name="email" 
+                    placeholder="Enter your email"
+                    autocomplete="email"
+                />
+                <div class="error"></div>
+            </div>
+            <div class="input-controls">
+                <label for="login-password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    placeholder="Enter your password"
+                    autocomplete="current-password"
+                />
+                <div class="error"></div>
+            </div>
+            <button type="submit">Login</button>
+            <div class="success-message" id="success-message">Login Successfull</div>
+            <p>Don't have an account? <a href="index.html">Sign Up here</a></p>
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="form" novalidate>
+            <h1>Create Account</h1>
+            <div class="input-controls">
+                <label for="username">Username</label>
+                <input type="text" id="username" placeholder="Enter The Username" autocomplete="username">
+                <div class="error"></div>
+            </div>
+            <div class="input-controls">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" placeholder="Enter The email" autocomplete="email">
+                <div class="error"></div>
+            </div>
+            <div class="input-controls">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter The password" autocomplete="password">
+                <div class="error"></div>
+            </div>
+            <div class="input-controls">
+                <label for="password2">Confirm Password</label>
+                <input type="password" id="password2" placeholder="Confirm The Password" autocomplete="password2">
+                <div class="error"></div>
+            </div>
+            <button type="submit">Sign-up</button>
+            <div class="success-message" id="success-message">Registration Successfull</div>
+            <p>Already Account ? <a href="login.html">Login </a>here</p>
+        </form>
+    </div>
+    <script>
+//         const form = document.getElementById('form');
+// const inputs = {
+//     username: document.getElementById('username'),
+//     email: document.getElementById('email'),
+//     password: document.getElementById('password'),
+//     password2: document.getElementById('password2')
+// };
+// const successMessage = document.getElementById('success-message');
+
+// const setInputStatus = (input, isValid, message = '') => {
+//     const parent = input.parentElement;
+//     parent.className = `input-controls ${isValid ? 'success' : 'error'}`;
+//     parent.querySelector('.error').innerText = message;
+// };
+
+// const validateInputs = (input, checks) => {
+//     for (const [check, message] of checks) {
+//         if (!check) {
+//             setInputStatus(input, false, message);
+//             return false;
+//         }
+//     }
+//     setInputStatus(input, true);
+//     return true;
+// };
+
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     successMessage.classList.remove('show');
+
+//     const validations = {
+//         username: [[inputs.username.value.trim() !== '', 'Username is Required']],
+//         email: [
+//             [inputs.email.value.trim() !== '', 'Email is Required'],
+//             [/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputs.email.value), 'Invalid Email']
+//         ],
+//         password: [
+//             [inputs.password.value.trim() !== '', 'Password is Required'],
+//             [inputs.password.value.length >= 8, 'Password Should be At Least 8 Characters Long']
+//         ],
+//         password2: [
+//             [inputs.password2.value.trim() !== '', 'Please Confirm the Password'],
+//             [inputs.password2.value === inputs.password.value, 'Passwords Do Not Match']
+//         ]
+//     };
+
+//     const isValid = Object.entries(inputs).every(([key, input]) =>
+//         validateInputs(input, validations[key])
+//     );
+
+//     if (isValid) {
+//         successMessage.classList.add('show');
+//         form.reset();
+//         Object.values(inputs).forEach(input => input.parentElement.className = 'input-controls');
+//     }
+// });
+
+// const form = document.getElementById('form');
+// const username = document.getElementById('username');
+// const email = document.getElementById('email');
+// const password = document.getElementById('password');
+// const password2 = document.getElementById('password2');
+// const successMessage = document.getElementById('success-message');
+
+// // Show error or success for a specific input
+// function showStatus(input, message, isValid) {
+//     const parent = input.parentElement;
+//     parent.className = `input-controls ${isValid ? 'success' : 'error'}`;
+//     parent.querySelector('.error').innerText = message;
+// }
+
+// // Validate individual fields
+// function validateField(input, checks) {
+//     for (const [check, message] of checks) {
+//         if (!check) {
+//             showStatus(input, message, false);
+//             return false;
+//         }
+//     }
+//     showStatus(input, '', true);
+//     return true;
+// }
+
+// // Submit event handler
+// form.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     successMessage.classList.remove('show');
+
+//     const usernameValid = validateField(username, [
+//         [username.value.trim() !== '', 'Username is required'],
+//     ]);
+
+//     const emailValid = validateField(email, [
+//         [email.value.trim() !== '', 'Email is required'],
+//         [/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value), 'Invalid email address'],
+//     ]);
+
+//     const passwordValid = validateField(password, [
+//         [password.value.trim() !== '', 'Password is required'],
+//         [password.value.length >= 8, 'Password must be at least 8 characters'],
+//     ]);
+
+//     const password2Valid = validateField(password2, [
+//         [password2.value.trim() !== '', 'Confirm password is required'],
+//         [password2.value === password.value, 'Passwords do not match'],
+//     ]);
+
+//     if (usernameValid && emailValid && passwordValid && password2Valid) {
+//         successMessage.classList.add('show');
+//         form.reset();
+//         document.querySelectorAll('.input-controls').forEach(control => {
+//             control.className = 'input-controls';
+//         });
+//     }
+// });
+        const form = document.getElementById('form');
+        const username = document.getElementById('username');
+        const email = document.getElementById('email');
+        const password = document.getElementById('password');
+        const password2 = document.getElementById('password2');
+        const successMessage = document.getElementById('success-message');
+
+        const setInputStatus = (input, message, isValid) => {
+            const parent = input.parentElement;
+            parent.className = `input-controls ${isValid ? 'success' : 'error'}`;
+            parent.querySelector('.error').innerText = message
+        }
+
+        const validateInputs = (input, checks) => {
+            for (const [check, message] of checks) {
+                if(!check) {
+                    setInputStatus(input,message,false);
+                    return false;
+                }
+            }
+            setInputStatus(input, '', true);
+            return true
+        }
+
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            successMessage.classList.remove('show');
+
+            const usernameFeild = validateInputs(username, [[username.value.trim() !== '', 'Username is Required!']]);
+
+            const emailValid = validateInputs(email, [[email.value.trim() !== '', 'Email is Required!'], [/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value)]]);
+
+            const passwordValid = validateInputs(password, [[password.value.trim() !== '', 'Password is Required'], [password.value.length >= 8, 'Password Should Atleat 8 Character Long!' ]]);
+
+            const password2Valid = validateInputs(password2, [[password2.value.trim() !== '', 'Confirm Password is required!'],[password2.value === password.value, 'Password Do Not Match']]);
+
+            if (usernameFeild && emailValid && passwordValid && password2Valid) {
+                successMessage.classList.add('show');
+                form.reset();
+                document.querySelectorAll('.input-controls').forEach(control => {control.className = 'input-controls'})
+            }
+        })
+    </script>
+</body>
+</html>
+
+<!-- <div class="container">
+    <form id="form" novalidate>
+        <h1>Create Account</h1>
+        <div class="input-controls">
+            <label for="username">Username</label>
+            <input type="text" id="username" placeholder="Enter The Username" autocomplete="username">
+            <div class="error"></div>
+        </div>
+        <div class="input-controls">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter The Email" autocomplete="email">
+            <div class="error"></div>
+        </div>
+        <div class="input-controls">
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Enter The password" autocomplete="password">
+            <div class="error"></div>
+        </div>
+        <div class="input-controls">
+            <label for="password2">Confirm Password</label>
+            <input type="password" id="password2" placeholder="Confirm The Password" autocomplete="password2">
+            <div class="error"></div>
+        </div>
+        <button type="submit">Sign-in</button>
+        <div class="success-message" id="success-message">Registration Sucessfull</div>
+        <p>Already Account ? <a href="/login.html">Login </a>here</p>
+    </form>
+</div> -->
